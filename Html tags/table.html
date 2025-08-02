@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        table,
+        th,
+        td{
+            border:1px solid black;
+        }
+        thead{
+            background:blue;
+        }
+        tfoot{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>
+            Monthly savings
+        </caption>
+        <!--?<caption>:başlık tanımlar table etiketinden sonra yerleştirilmelidir-->
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+                <th>Number</th>
+            </tr>
+            <!--?<tr>:satır,<th>:hücre-->
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$80</td>
+                <td>2</td>
+            </tr>  
+            <!--?<tbody>:tablo gövdesi,tüm normal hücreler buraya eklenir-->         
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Sum</td>
+                <td>$180</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+        <!--?<tfoot>:tablo altbilgisi,aynı işlem satırlar ve hücreler içinde buradan yapılır.-->
+        
+        <colgroup>
+            <col span="2"
+             style="background-color: red;">
+            <col style="background-color:yellow">
+        </colgroup>
+        <!--?<colgroup>:tek tek sutünları seçip CSS ile biçimlendirilebilen <col> etiketi ekleyebiliriz-->         
+    </table>
+</body>
+</html>
